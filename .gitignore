@@ -1,0 +1,59 @@
+# Environment and credentials — NEVER commit these
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+config.json
+credentials.json
+
+# Python build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/IDE settings — personal to you, not relevant to others
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Cursor-specific
+.cursor/
+
+# Contract source PDFs — copyrighted, not for release
+*.pdf
+
+# Excel backups and pre-anonymisation files
+*_original.xlsx
+*_backup.xlsx
+~$*.xlsx
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Log files
+*.log
+logs/
+
+# Whitelist: keep the paper's Figure 3 PDF even though *.pdf is blocked above
+!figures/figure3.pdf
+!experiments/tau_sensitivity/figure3.pdf

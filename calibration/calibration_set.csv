@@ -1,0 +1,151 @@
+query,label
+What is the interest rate charged on delayed payments?,simple
+What is the total Contract Price?,simple
+Who is the Client under this Contract?,simple
+Who is the Consultant?,simple
+On what date was the Contract made?,simple
+What is the Loan Number for this project?,simple
+What is the Contract Number?,simple
+Which bank financed this project?,simple
+What is the governing law of the Contract?,simple
+What is the binding language of the Contract?,simple
+How many days after the Effective Date must the Consultant commence the Services?,simple
+When does the Contract expire?,simple
+What is the advance payment percentage?,simple
+Within how many days after the Effective Date is the advance payment made?,simple
+Over how many months is the Time-Based advance payment recovered?,simple
+When is the advance payment bank guarantee released?,simple
+What is the first payment under the fixed-cost component and when is it made?,simple
+What is the second payment under the fixed-cost component?,simple
+What is the third payment under the fixed-cost component?,simple
+What is the fourth payment under the fixed-cost component?,simple
+Within how many days must the Client pay the Consultant's invoices?,simple
+How soon after each month must the Consultant submit itemized invoices?,simple
+Beyond how many days of delay does interest on delayed payments begin to accrue?,simple
+What is the currency of payment?,simple
+What is the ceiling for the Design Stage (Lump Sum)?,simple
+What is the ceiling for the Supervision Stage (Time-Based)?,simple
+What is the Provisional Sums amount?,simple
+What is the Contingencies amount?,simple
+What is the Competitive Items amount under the Supervision Stage?,simple
+What is the minimum professional liability insurance coverage required?,simple
+How often is remuneration adjusted for price changes?,simple
+Which index is used for the remuneration price adjustment?,simple
+What is the effectiveness condition for the Contract?,simple
+Within what period can the Contract be declared null and void if it has not become effective?,simple
+How many days' written notice is required to declare the Contract null and void under GCC 12?,simple
+Who is the Client's authorized representative / Project Director?,simple
+Who is the Consultant's authorized representative?,simple
+What is the Client's email address for communications?,simple
+What is the relationship between the Client and the Consultant?,simple
+Within how many days must a party give notice of a Force Majeure event?,simple
+Does Force Majeure include insufficiency of funds or failure to pay?,simple
+How many days does the Consultant have to remedy a failure after a suspension notice?,simple
+How many days' written notice must the Client give to terminate for the Consultant's failure to remedy?,simple
+How many days' notice is required for termination at the Client's sole discretion (for convenience)?,simple
+How many days' notice applies to termination for corrupt or fraudulent practices?,simple
+How many days must the Client be overdue before the Consultant can terminate for non-payment?,simple
+By how much may the Consultant adjust a Key Expert's time-input without Client approval?,simple
+At what rate of remuneration must a replacement Key Expert be provided?,simple
+Within how many days is an additional Key Expert deemed approved if the Client does not object?,simple
+"Who bears the cost of replacing Experts (e.g., additional travel)?",simple
+Are the Consultant's Experts entitled to overtime pay?,simple
+Who is responsible for the Consultant's tax liabilities?,simple
+Who reimburses local identifiable indirect taxes?,simple
+To whose account and bank are payments made?,simple
+What is the SWIFT code of the Consultant's bank account?,simple
+To what standard must the Consultant perform the Services?,simple
+What must the Consultant do with confidential information acquired during the Services?,simple
+Who owns the reports and data prepared by the Consultant?,simple
+To whom does equipment purchased with Client funds belong?,simple
+When is the final report deemed approved if the Client gives no notice?,simple
+What dispute-resolution methods are available under the Contract?,simple
+Under whose rules are the arbitration proceedings conducted?,simple
+Where shall the arbitration proceedings be held?,simple
+What is the official language of the arbitration?,simple
+Who bears the cost of the arbitration?,simple
+To how many sittings is the arbitration panel limited?,simple
+From which body is the list of arbitrator nominees obtained for technical disputes?,simple
+Who appoints the third arbitrator if the party-appointed arbitrators fail to agree?,simple
+Within how many days must a party respond to a Notice of Dispute?,simple
+What is the cap on the Consultant's liability for direct loss or damage?,simple
+When is the Consultant NOT protected by the liability cap?,simple
+What is the Effective Date of the Contract?,simple
+Is a 'Day' a working day or a calendar day by default?,simple
+Which procurement guidelines apply to this Contract?,simple
+What is the name of the project?,simple
+"The Client has withheld payments for over a year citing the absence of a signed Contract Amendment Agreement (CAA-2). Analyze whether withholding payment on this basis is contractually valid, and identify the remedies available to the Consultant.",complex
+The Employer insists the Consultant must sign CAA-2 as a precondition for releasing payments. Evaluate the validity of the Employer's position under the variation provisions.,complex
+"The Consultant wishes to terminate the Contract because the Client has withheld roughly LKR 100 million from Oct 2023 to May 2025. Set out the procedure, notice periods, and payments due on termination.",complex
+"A flood (Force Majeure) prevents the Consultant from performing for 70 consecutive days. Set out each party's rights regarding continuation, demobilization, time extension, and termination.",complex
+The Client argues that the Consultant's inability to perform due to a labor strike is a breach justifying termination. Analyze whether this is Force Majeure and the consequences.,complex
+A Key Expert dies mid-contract and must be replaced. Explain the substitution process and the remuneration implications.,complex
+"The Consultant proposes increasing a Key Expert's time-input by 15%. Is Client approval required, and what happens if a ceiling is exceeded?",complex
+A technical dispute has not been amicably resolved. Walk through the steps to refer it to arbitration and constitute the tribunal.,complex
+The parties disagree on whether a dispute is 'technical.' How does this affect the composition of the arbitration panel?,complex
+The Client terminates the Contract for convenience. What payments is the Consultant entitled to?,complex
+"The Client suspends all payments alleging the Consultant failed to submit reports on time. What must the suspension notice contain, and what is the Consultant's cure period?",complex
+The Consultant discovers a Sub-Consultant has engaged in a fraudulent practice. What are the Consultant's obligations and the Client's rights?,complex
+"The Client refuses to provide site access, delaying the Services. What relief is available to the Consultant?",complex
+Counterpart personnel promised by the Client are not provided. How is the affected part of the Services handled?,complex
+A change in Sri Lankan tax law increases the Consultant's costs mid-contract. Can the remuneration be adjusted?,complex
+The Client wants the Consultant to make its recommendations public. Is this permitted?,complex
+"While advising on procurement, the Consultant is offered a trade commission by a supplier. Analyze this under the conflict-of-interest rules.",complex
+"After the Contract ends, the Consultant is invited to bid for downstream works arising from its own designs. Is it eligible?",complex
+The Client alleges the Consultant failed to maintain professional liability insurance. What is required and what is the consequence?,complex
+The remuneration index (CCPI) rises after 13 months. Explain how the adjusted remuneration is determined.,complex
+The Client claims the Consultant must absorb a direct loss of three times the contract value caused by ordinary negligence. Is the Client correct?,complex
+The Consultant wants to subcontract part of the Services. What approvals and responsibilities apply?,complex
+"The Client/Bank wishes to inspect the Consultant's accounts and records. What rights exist, and what is the consequence of impeding inspection?",complex
+The Consultant fails to comply with a final arbitration award. What can the Client do?,complex
+The Client fails to comply with a final arbitration award. What can the Consultant do?,complex
+The Client is in material breach and fails to cure. What is the Consultant's remedy and cure period?,complex
+"Explain how and over what period the 10% advance payment is recovered, and when the advance guarantee is released.",complex
+The Consultant submits an invoice partly unsupported by documentation. Can the Client withhold the whole invoice?,complex
+"The final report has been submitted. When is it deemed approved, and what is the final-payment process?",complex
+The Client overpaid in error. What is the mechanism to recover the overpayment?,complex
+The Consultant believes it is being unduly pressured to accept unfavorable amendment terms. Frame the contractual basis to resist while preserving its payment rights.,complex
+A substantial variation to the scope of Services is proposed. What approval is required beyond the parties' agreement?,complex
+Can the Consultant claim damages for the Client's payment default under Sri Lankan law?,complex
+"The Client asserts it can terminate 'for any reason whatsoever.' Is this valid, and what protects the Consultant?",complex
+The Consultant's Expert is charged with a criminal offence. What can the Client require?,complex
+Determine the order of precedence when the SCC conflicts with the GCC and with an Appendix.,complex
+The Consultant wants to retain copies of project documents for marketing. Is this allowed?,complex
+Client-funded equipment remains after the Contract expires. Who owns it and how is it disposed?,complex
+On what basis may the Consultant seek reimbursement of indirect local taxes?,complex
+A Notice of Dispute is issued but the receiving party does not respond within 14 days. What is the next step?,complex
+The two party-appointed arbitrators cannot agree on a third within 30 days. Who appoints the chair?,complex
+One party refuses to appoint its arbitrator within 30 days. What can the other party do?,complex
+Determine the nationality restrictions on the sole or third arbitrator.,complex
+The Consultant claims interest on a payment delayed by 40 days. Explain the basis and rate.,complex
+Where in the Contract is it stated that rejecting a proposed amendment will not jeopardize the Consultant's other rights?,complex
+The Client requires the Consultant to comply with import prohibitions arising from a UN Security Council decision. Explain the obligation.,complex
+What assistance must the Client provide for the Consultant's Experts' work permits and visas?,complex
+The Consultant is accused of corrupt practice in executing the Contract. What process and consequences follow?,complex
+Distinguish 'fraudulent practice' from 'collusive practice' under the Anticorruption Policy.,complex
+The Consultant must disclose commissions paid to agents. What must be disclosed and what is the consequence of failure?,complex
+A flood damages Client-furnished equipment in the Consultant's possession. Who bears the risk and insurance obligation?,complex
+During a prolonged Force Majeure the Consultant demobilizes. What costs are reimbursable?,complex
+How are performance time periods affected by a Force Majeure event?,complex
+The Client alleges the Consultant's own negligence caused a Force-Majeure-like event. Does the no-breach protection apply?,complex
+What happens to accrued rights upon termination or expiration of the Contract?,complex
+"On receiving a termination notice, what immediate steps must the Consultant take regarding the Services and documents?",complex
+The Consultant needs to bring foreign currency into Sri Lanka for the Services. What assistance applies?,complex
+What is the Consultant's liability for damage to third parties caused during the Services?,complex
+The Consultant proposes a sole arbitrator and nominates a named QS. On what basis is this permissible for a technical dispute?,complex
+The Client argues the arbitration award should not be enforceable. Is the award final and binding?,complex
+Can the Consultant recover Experts' return travel costs after a termination for convenience?,complex
+Set out the effectiveness sequence from signature to expiry.,complex
+What accounting standard and access rights apply to the Consultant's records?,complex
+A Sub-Consultant's harassment is reported. What must the Consultant do?,complex
+On what contractual basis may the Client disqualify the Consultant for a conflict?,complex
+May bonuses or profit-sharing be included as overheads within remuneration rates?,complex
+Rates for an Expert not yet appointed appear in the Contract. Are they final?,complex
+The Consultant claims overtime and paid sick leave for its Experts. Are these payable?,complex
+The Client and Consultant dispute whether a Force Majeure event exists. How is this resolved?,complex
+What is the rule restricting changes to Key Experts?,complex
+A conflict of interest arises mid-contract. What is the disclosure duty?,complex
+Can the Client withhold payment while simultaneously demanding continued performance? Analyze.,complex
+The Consultant seeks a time extension because Client facilities were not made available. What is the basis?,complex
+Is the Client obliged to instruct Government officials to facilitate the Services?,complex
+"Construct the full remedy chain available to the Consultant for sustained non-payment, from notice to arbitration.",complex

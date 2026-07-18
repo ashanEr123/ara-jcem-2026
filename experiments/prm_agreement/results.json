@@ -1,0 +1,960 @@
+{
+  "n_decision_points": 21,
+  "n_no_modal_steps": 1,
+  "n_modal_eligible_steps": 20,
+  "n_prm_tie_steps": 1,
+  "fallback_rate_pct": 0.0,
+  "composite_score": "mean(usefulness, relevance, efficiency)",
+  "tie_handling": "PRM and expert argmax are sets of tied top-scoring candidate ids; top-1 agreement is true when the sets overlap.",
+  "metrics": {
+    "top1_prm_vs_E1": {
+      "point": 0.7142857142857143,
+      "ci_low": 0.5238095238095238,
+      "ci_high": 0.9047619047619048
+    },
+    "top1_prm_vs_E2": {
+      "point": 0.6190476190476191,
+      "ci_low": 0.42857142857142855,
+      "ci_high": 0.8095238095238095
+    },
+    "top1_prm_vs_E3": {
+      "point": 0.7619047619047619,
+      "ci_low": 0.5714285714285714,
+      "ci_high": 0.9523809523809523
+    },
+    "top1_prm_vs_mean_expert": {
+      "point": 0.6984126984126984,
+      "ci_low": 0.5396825396825397,
+      "ci_high": 0.8571428571428571
+    },
+    "top1_prm_vs_modal": {
+      "point": 0.75,
+      "ci_low": 0.5555555555555556,
+      "ci_high": 0.9473684210526315
+    },
+    "top1_inter_expert": {
+      "point": 0.9047619047619048,
+      "ci_low": 0.7619047619047619,
+      "ci_high": 1.0
+    },
+    "spearman_prm_vs_mean_expert": {
+      "point": 0.37669921916775995,
+      "ci_low": 0.07469478358635,
+      "ci_high": 0.6390742795889379
+    },
+    "spearman_inter_expert": {
+      "point": 0.4467386248269781,
+      "ci_low": 0.14601371092206814,
+      "ci_high": 0.7061948633243126
+    }
+  },
+  "sanity_passed": true,
+  "decision_points": [
+    {
+      "query_id": "B03",
+      "step": 1,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        1
+      ],
+      "prm_pick": 1,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          0,
+          1,
+          2
+        ],
+        "E2": [
+          0,
+          1
+        ],
+        "E3": [
+          0,
+          1
+        ]
+      },
+      "modal_winner_ids": [
+        0,
+        1
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "0": 3,
+        "1": 3,
+        "2": 1
+      },
+      "top1_prm_vs_expert": {
+        "E1": true,
+        "E2": true,
+        "E3": true
+      },
+      "top1_prm_vs_modal": true,
+      "spearman": {
+        "E1": null,
+        "E2": 0.0,
+        "E3": 0.0
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "B03",
+      "step": 2,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        0
+      ],
+      "prm_pick": 0,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          2
+        ],
+        "E2": [
+          2
+        ],
+        "E3": [
+          2
+        ]
+      },
+      "modal_winner_ids": [
+        2
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "2": 3
+      },
+      "top1_prm_vs_expert": {
+        "E1": false,
+        "E2": false,
+        "E3": false
+      },
+      "top1_prm_vs_modal": false,
+      "spearman": {
+        "E1": -0.8660254037844387,
+        "E2": -1.0,
+        "E3": -0.8660254037844387
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "B03",
+      "step": 3,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        1,
+        2
+      ],
+      "prm_pick": 1,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": true,
+      "expert_winner_ids": {
+        "E1": [
+          1,
+          2
+        ],
+        "E2": [
+          0,
+          1
+        ],
+        "E3": [
+          0
+        ]
+      },
+      "modal_winner_ids": [
+        0,
+        1
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "1": 2,
+        "2": 1,
+        "0": 2
+      },
+      "top1_prm_vs_expert": {
+        "E1": true,
+        "E2": true,
+        "E3": false
+      },
+      "top1_prm_vs_modal": true,
+      "spearman": {
+        "E1": 1.0,
+        "E2": -0.5000000000000001,
+        "E3": -0.8660254037844387
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "B03",
+      "step": 4,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        0
+      ],
+      "prm_pick": 0,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          1,
+          2
+        ],
+        "E2": [
+          1,
+          2
+        ],
+        "E3": [
+          0,
+          1,
+          2
+        ]
+      },
+      "modal_winner_ids": [
+        1,
+        2
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "1": 3,
+        "2": 3,
+        "0": 1
+      },
+      "top1_prm_vs_expert": {
+        "E1": false,
+        "E2": false,
+        "E3": true
+      },
+      "top1_prm_vs_modal": false,
+      "spearman": {
+        "E1": -0.8660254037844387,
+        "E2": -0.8660254037844387,
+        "E3": null
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "B03",
+      "step": 5,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        0
+      ],
+      "prm_pick": 0,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          1,
+          2
+        ],
+        "E2": [
+          0,
+          1
+        ],
+        "E3": [
+          0,
+          1
+        ]
+      },
+      "modal_winner_ids": [
+        0,
+        1
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "1": 3,
+        "2": 1,
+        "0": 2
+      },
+      "top1_prm_vs_expert": {
+        "E1": false,
+        "E2": true,
+        "E3": true
+      },
+      "top1_prm_vs_modal": true,
+      "spearman": {
+        "E1": -0.8660254037844387,
+        "E2": 0.8660254037844387,
+        "E3": 0.8660254037844387
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "B03",
+      "step": 6,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        1
+      ],
+      "prm_pick": 1,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          1
+        ],
+        "E2": [
+          1
+        ],
+        "E3": [
+          1
+        ]
+      },
+      "modal_winner_ids": [
+        1
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "1": 3
+      },
+      "top1_prm_vs_expert": {
+        "E1": true,
+        "E2": true,
+        "E3": true
+      },
+      "top1_prm_vs_modal": true,
+      "spearman": {
+        "E1": 1.0,
+        "E2": 1.0,
+        "E3": 0.8660254037844387
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "B06",
+      "step": 1,
+      "n_candidates": 2,
+      "prm_winner_ids": [
+        0
+      ],
+      "prm_pick": 0,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          0
+        ],
+        "E2": [
+          0
+        ],
+        "E3": [
+          0
+        ]
+      },
+      "modal_winner_ids": [
+        0
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "0": 3
+      },
+      "top1_prm_vs_expert": {
+        "E1": true,
+        "E2": true,
+        "E3": true
+      },
+      "top1_prm_vs_modal": true,
+      "spearman": {
+        "E1": 0.9999999999999999,
+        "E2": 0.9999999999999999,
+        "E3": 0.9999999999999999
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "B06",
+      "step": 2,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        1
+      ],
+      "prm_pick": 1,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          1
+        ],
+        "E2": [
+          1
+        ],
+        "E3": [
+          1
+        ]
+      },
+      "modal_winner_ids": [
+        1
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "1": 3
+      },
+      "top1_prm_vs_expert": {
+        "E1": true,
+        "E2": true,
+        "E3": true
+      },
+      "top1_prm_vs_modal": true,
+      "spearman": {
+        "E1": 1.0,
+        "E2": 0.5,
+        "E3": 1.0
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "X02",
+      "step": 1,
+      "n_candidates": 2,
+      "prm_winner_ids": [
+        0
+      ],
+      "prm_pick": 0,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          0
+        ],
+        "E2": [
+          1
+        ],
+        "E3": [
+          0
+        ]
+      },
+      "modal_winner_ids": [
+        0
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "0": 2,
+        "1": 1
+      },
+      "top1_prm_vs_expert": {
+        "E1": true,
+        "E2": false,
+        "E3": true
+      },
+      "top1_prm_vs_modal": true,
+      "spearman": {
+        "E1": 0.9999999999999999,
+        "E2": -0.9999999999999999,
+        "E3": 0.9999999999999999
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "X02",
+      "step": 2,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        0
+      ],
+      "prm_pick": 0,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          0,
+          1
+        ],
+        "E2": [
+          1
+        ],
+        "E3": [
+          1
+        ]
+      },
+      "modal_winner_ids": [
+        1
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "0": 1,
+        "1": 3
+      },
+      "top1_prm_vs_expert": {
+        "E1": true,
+        "E2": false,
+        "E3": false
+      },
+      "top1_prm_vs_modal": false,
+      "spearman": {
+        "E1": 0.8660254037844387,
+        "E2": 0.5,
+        "E3": 0.5
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "X02",
+      "step": 3,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        1
+      ],
+      "prm_pick": 1,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          1
+        ],
+        "E2": [
+          1
+        ],
+        "E3": [
+          1
+        ]
+      },
+      "modal_winner_ids": [
+        1
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "1": 3
+      },
+      "top1_prm_vs_expert": {
+        "E1": true,
+        "E2": true,
+        "E3": true
+      },
+      "top1_prm_vs_modal": true,
+      "spearman": {
+        "E1": 0.8660254037844387,
+        "E2": 0.8660254037844387,
+        "E3": 0.8660254037844387
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "X05",
+      "step": 1,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        1
+      ],
+      "prm_pick": 1,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          0,
+          1
+        ],
+        "E2": [
+          0,
+          1
+        ],
+        "E3": [
+          0,
+          1
+        ]
+      },
+      "modal_winner_ids": [
+        0,
+        1
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "0": 3,
+        "1": 3
+      },
+      "top1_prm_vs_expert": {
+        "E1": true,
+        "E2": true,
+        "E3": true
+      },
+      "top1_prm_vs_modal": true,
+      "spearman": {
+        "E1": 0.8660254037844387,
+        "E2": 0.8660254037844387,
+        "E3": 0.8660254037844387
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "X05",
+      "step": 2,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        0
+      ],
+      "prm_pick": 0,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          0,
+          1
+        ],
+        "E2": [
+          1
+        ],
+        "E3": [
+          0,
+          1
+        ]
+      },
+      "modal_winner_ids": [
+        0,
+        1
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "0": 2,
+        "1": 3
+      },
+      "top1_prm_vs_expert": {
+        "E1": true,
+        "E2": false,
+        "E3": true
+      },
+      "top1_prm_vs_modal": true,
+      "spearman": {
+        "E1": 0.8660254037844387,
+        "E2": 0.5,
+        "E3": 0.8660254037844387
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "X05",
+      "step": 3,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        1
+      ],
+      "prm_pick": 1,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          1
+        ],
+        "E2": [
+          1
+        ],
+        "E3": [
+          1
+        ]
+      },
+      "modal_winner_ids": [
+        1
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "1": 3
+      },
+      "top1_prm_vs_expert": {
+        "E1": true,
+        "E2": true,
+        "E3": true
+      },
+      "top1_prm_vs_modal": true,
+      "spearman": {
+        "E1": 1.0,
+        "E2": 1.0,
+        "E3": 1.0
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "X09",
+      "step": 1,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        1
+      ],
+      "prm_pick": 1,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          0,
+          1
+        ],
+        "E2": [
+          0,
+          1,
+          2
+        ],
+        "E3": [
+          0,
+          1
+        ]
+      },
+      "modal_winner_ids": [
+        0,
+        1
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "0": 3,
+        "1": 3,
+        "2": 1
+      },
+      "top1_prm_vs_expert": {
+        "E1": true,
+        "E2": true,
+        "E3": true
+      },
+      "top1_prm_vs_modal": true,
+      "spearman": {
+        "E1": 0.0,
+        "E2": null,
+        "E3": 0.0
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "X09",
+      "step": 2,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        2
+      ],
+      "prm_pick": 2,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          0
+        ],
+        "E2": [
+          1
+        ],
+        "E3": [
+          2
+        ]
+      },
+      "modal_winner_ids": [],
+      "has_modal": false,
+      "vote_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 1
+      },
+      "top1_prm_vs_expert": {
+        "E1": false,
+        "E2": false,
+        "E3": true
+      },
+      "top1_prm_vs_modal": null,
+      "spearman": {
+        "E1": -0.8660254037844387,
+        "E2": -0.5,
+        "E3": 0.5
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "X09",
+      "step": 3,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        0
+      ],
+      "prm_pick": 0,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          2
+        ],
+        "E2": [
+          2
+        ],
+        "E3": [
+          2
+        ]
+      },
+      "modal_winner_ids": [
+        2
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "2": 3
+      },
+      "top1_prm_vs_expert": {
+        "E1": false,
+        "E2": false,
+        "E3": false
+      },
+      "top1_prm_vs_modal": false,
+      "spearman": {
+        "E1": -0.8660254037844387,
+        "E2": -1.0,
+        "E3": -0.8660254037844387
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "X09",
+      "step": 4,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        1
+      ],
+      "prm_pick": 1,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          1
+        ],
+        "E2": [
+          1
+        ],
+        "E3": [
+          1
+        ]
+      },
+      "modal_winner_ids": [
+        1
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "1": 3
+      },
+      "top1_prm_vs_expert": {
+        "E1": true,
+        "E2": true,
+        "E3": true
+      },
+      "top1_prm_vs_modal": true,
+      "spearman": {
+        "E1": 1.0,
+        "E2": 1.0,
+        "E3": 1.0
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "X10",
+      "step": 1,
+      "n_candidates": 2,
+      "prm_winner_ids": [
+        0
+      ],
+      "prm_pick": 0,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          0
+        ],
+        "E2": [
+          0
+        ],
+        "E3": [
+          0
+        ]
+      },
+      "modal_winner_ids": [
+        0
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "0": 3
+      },
+      "top1_prm_vs_expert": {
+        "E1": true,
+        "E2": true,
+        "E3": true
+      },
+      "top1_prm_vs_modal": true,
+      "spearman": {
+        "E1": 0.9999999999999999,
+        "E2": 0.9999999999999999,
+        "E3": 0.9999999999999999
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "X10",
+      "step": 2,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        0
+      ],
+      "prm_pick": 0,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          1
+        ],
+        "E2": [
+          1
+        ],
+        "E3": [
+          1
+        ]
+      },
+      "modal_winner_ids": [
+        1
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "1": 3
+      },
+      "top1_prm_vs_expert": {
+        "E1": false,
+        "E2": false,
+        "E3": false
+      },
+      "top1_prm_vs_modal": false,
+      "spearman": {
+        "E1": 0.5,
+        "E2": 0.5,
+        "E3": 0.5
+      },
+      "fallback_used": false
+    },
+    {
+      "query_id": "X10",
+      "step": 3,
+      "n_candidates": 3,
+      "prm_winner_ids": [
+        0
+      ],
+      "prm_pick": 0,
+      "prm_pick_in_winner_set": true,
+      "prm_tie": false,
+      "expert_winner_ids": {
+        "E1": [
+          0
+        ],
+        "E2": [
+          0
+        ],
+        "E3": [
+          0
+        ]
+      },
+      "modal_winner_ids": [
+        0
+      ],
+      "has_modal": true,
+      "vote_counts": {
+        "0": 3
+      },
+      "top1_prm_vs_expert": {
+        "E1": true,
+        "E2": true,
+        "E3": true
+      },
+      "top1_prm_vs_modal": true,
+      "spearman": {
+        "E1": 1.0,
+        "E2": 1.0,
+        "E3": 1.0
+      },
+      "fallback_used": false
+    }
+  ]
+}

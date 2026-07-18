@@ -1,0 +1,28 @@
+{
+  "alpha": {
+    "T": 1.0,
+    "Ops": 2.5287,
+    "Depth": 6.9883,
+    "Amb": 6.5402,
+    "Dom": 0.9382
+  },
+  "tau": 77.27,
+  "fit": "L2 logistic regression with non-negativity constraint on coefficients",
+  "priors": "balanced",
+  "n_simple": 75,
+  "n_complex": 75,
+  "cv_auc_mean": 0.94,
+  "cv_auc_folds": [0.93, 0.95, 0.94, 0.93, 0.95],
+  "cv_folds": 5,
+  "cv_stratified": true,
+  "random_seed": 42,
+  "score_dist": {
+    "simple":  [67.27, 7.00],
+    "complex": [87.27, 12.97]
+  },
+  "sklearn_version": "1.5.0",
+  "numpy_version": "1.26.4",
+  "python_version": "3.11",
+  "date_fitted": "2026-06-XX",
+  "notes": "Run calibrate.py to regenerate. Weights and τ should reproduce to 3 decimal places on the same sklearn version."
+}
