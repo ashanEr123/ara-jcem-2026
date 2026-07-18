@@ -7,7 +7,7 @@ Reproducibility artifacts for the paper:
 > *Journal of Construction Engineering and Management*, ASCE. Manuscript COENG-19357.
 
 **Persistent DOI (Zenodo):** [to be minted at final submission — Zenodo assigns a DOI when you tag the first release]
-**GitHub:** [replace with actual URL before submission]
+**GitHub:** https://github.com/ashanEr123/ara-jcem-2026
 
 ## What this repository is (and is not)
 
