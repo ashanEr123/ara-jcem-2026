@@ -143,7 +143,7 @@ If you use these artifacts, please cite both the paper and the Zenodo record:
   journal = {Journal of Construction Engineering and Management},
   year    = {2026},
   publisher = {ASCE},
-  note    = {Manuscript COENG-19357}
+  note    = {Manuscript COENG-19357: Under Review}
 }
 
 @dataset{ara2026_zenodo,
@@ -152,7 +152,7 @@ If you use these artifacts, please cite both the paper and the Zenodo record:
                Boteju, L.S.W. and Kudabalage, A.E.},
   year      = {2026},
   publisher = {Zenodo},
-  doi       = {[to be minted at release]}
+  doi       = {10.5281/zenodo.21426461}
 }
 ```
 
