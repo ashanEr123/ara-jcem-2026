@@ -6,7 +6,7 @@ Reproducibility artifacts for the paper:
 > Uduwage-Don, N.L.S., Sivanraj, S., Maung, L.M., Boteju, L.S.W., & Kudabalage, A.E. (2026).
 > *Journal of Construction Engineering and Management*, ASCE. Manuscript COENG-19357.
 
-**Persistent DOI (Zenodo):** [to be minted at final submission — Zenodo assigns a DOI when you tag the first release]
+**Persistent DOI (Zenodo):** https://doi.org/10.5281/zenodo.21426460
 **GitHub:** https://github.com/ashanEr123/ara-jcem-2026
 
 ## What this repository is (and is not)
