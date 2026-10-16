@@ -24,7 +24,7 @@ Original general-purpose GPT and Mistral conditions were ungrounded reference co
 
 The supplementary rerun contains 540 completed trials: 20 questions, five methods and five repetitions (500 trials), plus eight OCR-correction questions with five repetitions (40 trials). One failed attempt was archived before a successful retry, giving 541 recorded formal attempts. Smoke checks are excluded. Both evaluators independently rated the 108 designated repetition-0 answers, producing 216 rating rows. The other 432 completed answers provide repeated timing observations, not additional human ratings.
 
-ARA's mean correctness was 1.90/2, compared with 1.85 for GYM, 1.80 for FLOW and grounded GPT, and 1.75 for grounded Mistral. All paired correctness intervals include zero. Mean query median latency was 39.87 seconds for ARA and 43.13 seconds for GYM. C03 alone accounts for the 0.10-point lead over FLOW and grounded GPT. ARA selected GYM on C03, so the gap from standalone GYM reflects separate executions of the same retrieval and generation pipeline, not a routing benefit. Excluding C03, ARA scores below GYM. The supplementary results do not demonstrate a correctness improvement attributable to routing. Latency is computational response time, not practitioner time savings.
+ARA's mean correctness was 1.90/2, compared with 1.85 for GYM, 1.80 for FLOW and grounded GPT, and 1.75 for grounded Mistral. All paired correctness intervals include zero. Mean query median latency was 39.87 seconds for ARA and 43.13 seconds for GYM. CIR-03 (original ID C03) alone accounts for the 0.10-point lead over FLOW and grounded GPT. ARA selected GYM on CIR-03 (original ID C03), so the gap from standalone GYM reflects separate executions of the same retrieval and generation pipeline, not a routing benefit. Excluding CIR-03 (original ID C03), ARA scores below GYM. The supplementary results do not demonstrate a correctness improvement attributable to routing. Latency is computational response time, not practitioner time savings.
 
 ## Files added by this release
 
@@ -43,8 +43,12 @@ Execution code is preserved byte-for-byte from the completed archive. Its older 
 
 ## Licensing and citation
 
-The preceding repository README declared MIT licensing for code and CC BY 4.0 for data and documentation. This update preserves those declarations and grants no rights to withheld corpus material. Cite the manuscript and the exact repository commit used. No DOI or publication details are invented here.
+The preceding repository README declared MIT licensing for code and CC BY 4.0 for data and documentation. This update preserves those declarations and grants no rights to withheld corpus material. Cite the manuscript and the archived repository version: Rev3, https://doi.org/10.5281/zenodo.23416836. See `docs/DATA_AVAILABILITY.md` for the repository citation and public-data scope.
 
 ## Document clarifications
 
 See `docs/R2_METHOD_CLARIFICATIONS.md` for author-confirmed rubric and reporting clarifications made after the accompanying supplement was generated. Its numeric results are unchanged.
+
+## Identifier conventions
+
+See `docs/IDENTIFIER_CONVENTIONS.md` for the contextual crosswalk. Supplementary Evaluator 1 is original expert PNL-01; Evaluator 2 is PNL-08. PRM labels identify workbooks and do not imply a verified correspondence to these evaluators. Original machine-readable identifiers remain unchanged.

@@ -6,7 +6,7 @@ We have deposited the public code and research artifacts in Zenodo (ashanEr123 2
 
 ## Repository reference
 
-ashanEr123. 2026. “ARA for construction-contract interpretation: code and validation artifacts (Rev2).” Version Rev2. Zenodo. https://doi.org/10.5281/zenodo.23416460.
+ashanEr123. 2026. “ARA for construction-contract interpretation: code and validation artifacts (Rev3).” Version Rev3. Zenodo. https://doi.org/10.5281/zenodo.23416836.
 
 The citation uses the creator name registered on the Zenodo record.
 
@@ -16,10 +16,8 @@ We have released the PRM prompt at `experiments/prm_agreement/prm_prompt.txt` in
 
 ## Response to reviewer
 
-We have deposited the public code and research artifacts in Zenodo and revised the Data Availability Statement to use the repository option. The statement now identifies the deposited materials, cites the published version-specific DOI (10.5281/zenodo.23416460), and distinguishes the public numeric data from restricted source documents and text-bearing records. We have also aligned the prompt-release statement in Section 3.4 with the deposited PRM prompt. The public files are available directly, without a request to the authors.
+We have deposited the public code and research artifacts in Zenodo and revised the Data Availability Statement to use the repository option. The statement now identifies the deposited materials, cites the published version-specific DOI (10.5281/zenodo.23416836), and distinguishes the public numeric data from restricted source documents and text-bearing records. We have also aligned the prompt-release statement in Section 3.4 with the deposited PRM prompt. The public files are available directly, without a request to the authors.
 
-## Archive verification
+## Release scope
 
-Published on 16 October 2026. The archive `ara-jcem-2026-Rev2.zip` contains all 60 files from GitHub commit `e8f5d37379beb3cee3d2a19b9d119bf723127a44`. Every file was checked against its Git blob hash before upload; Zenodo's reported ZIP MD5 matches the local ZIP: `1d57458d7d78ef3556e7af523c48855d`.
-
-This document was updated after publication to supply the final DOI; the archived snapshot retains the pre-publication version of this document. The archived methodological clarification note accompanies the earlier supplementary Word document. The manuscript, reviewer response and Word revisions require corresponding editorial updates before journal submission.
+Rev3 adds the identifier crosswalk and evaluator correspondence in `docs/IDENTIFIER_CONVENTIONS.md`. Original experimental files and observations are retained. This repository statement supplies the wording for the manuscript; the Word files require corresponding editorial updates before submission.
