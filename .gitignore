@@ -57,3 +57,22 @@ logs/
 # Whitelist: keep the paper's Figure 3 PDF even though *.pdf is blocked above
 !figures/figure3.pdf
 !experiments/tau_sensitivity/figure3.pdf
+
+
+# R2 release additions
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+private_data/
+private_logs/
+experiments/r2_rerun/execution_source/sources/
+experiments/r2_rerun/execution_source/work_rerun/
+experiments/r2_rerun/execution_source/calib_db/
+experiments/r2_rerun/execution_source/questions.json
+experiments/r2_rerun/execution_source/corpus/
+experiments/r2_rerun/execution_source/vectordb/

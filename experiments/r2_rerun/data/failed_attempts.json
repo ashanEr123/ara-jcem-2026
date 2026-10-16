@@ -1,0 +1,13 @@
+[
+  {
+    "id": "C08_GYM_2",
+    "qid": "C08",
+    "source": "CIRCULARS",
+    "system": "GYM",
+    "rep": 2,
+    "status": "failed",
+    "elapsed_s": 7.5002342000370845,
+    "error_type": "ProviderHalt",
+    "started_utc": "2026-10-15T14:51:38Z"
+  }
+]

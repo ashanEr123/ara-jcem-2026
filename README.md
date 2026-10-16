@@ -1,176 +1,50 @@
-# ARA: Adaptive Retrieval-Augmented Architecture for Construction Contract Interpretation
+# ARA research artifacts
 
-Reproducibility artifacts for the paper:
+Reproducibility materials for the construction contract interpretation study, manuscript COENG-19357. This revision adds the completed October 2026 supplementary evaluation. The study remains a manuscript under review; no acceptance or publication is implied.
 
-> *A Dual-Pipeline Retrieval-Augmented Generation Architecture for Construction Contract Interpretation Using Query Complexity Assessment*
-> Uduwage-Don, N.L.S., Sivanraj, S., Maung, L.M., Boteju, L.S.W., & Kudabalage, A.E. (2026).
-> *Journal of Construction Engineering and Management*, ASCE. Manuscript COENG-19357.
+## Reproduce the supplementary analysis
 
-**Persistent DOI (Zenodo):** https://doi.org/10.5281/zenodo.21426460
-**GitHub:** https://github.com/ashanEr123/ara-jcem-2026
+From the repository root, with Python 3.10 or later:
 
-## What this repository is (and is not)
-
-This repository releases the **calibration data, benchmark queries, calibrated model parameters, evaluation code, and analysis outputs** needed to reproduce the quantitative claims in the paper. It does **not** release the full ARA codebase, the source contract PDFs (which are third-party contracts not owned by the authors), or expert names.
-
-Everything in this repository can be inspected and re-run without access to the ARA production system. Where an artifact depends on an LLM API call, we have pre-computed and released the outputs so the pipeline can be reproduced without incurring API costs.
-
-## What you need to reproduce our results
-
-**Software.** Python ≥ 3.10, with the packages listed in `requirements.txt` (scikit-learn, numpy, pandas, matplotlib, scipy). Install with:
-
-```
-pip install -r requirements.txt
+```powershell
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install -r experiments/r2_rerun/requirements-analysis.txt
+.venv\Scripts\python.exe experiments/r2_rerun/analyze_public.py
 ```
 
-**Data.** All calibration data, benchmark queries, and PRM traces are in this repository. You do **not** need access to any external corpus, third-party contract, or LLM API to reproduce the numbers in the paper — the ratings, traces, and computed scores are all pre-recorded here.
+On macOS/Linux use `.venv/bin/python` instead. The script makes no API calls. It writes `experiments/r2_rerun/results/summary.json` from the released numeric observations. See `experiments/r2_rerun/DATA_DICTIONARY.md` for definitions and scope.
 
-**Compute.** All scripts run in under five minutes on a laptop. No GPU required.
+## Experiments and interpretation
 
-## Repository layout
+The primary benchmark and the supplementary rerun are distinct experiments. Their scores and timings must not be pooled. Existing primary files in `calibration/`, `benchmark/`, and earlier `experiments/` folders remain part of the repository; this release adds supplementary artifacts without changing the earlier observations. The existing PRM prompt is available at `experiments/prm_agreement/prm_prompt.txt`. Historical threshold-sensitivity results are retained for provenance and are not validation of the current router.
 
-```
-ara-jcem-2026/
-├── README.md                          this file
-├── LICENSE                            MIT (code); CC BY 4.0 (data)
-├── requirements.txt                   pinned Python dependencies
-│
-├── calibration/                       Section 3.2.6 of the paper
-│   ├── calibration_set.csv            [1] 150-query balanced calibration set
-│   ├── calibrate.py                   [2] logistic-regression + Gaussian-mixture τ script
-│   └── calibration_recovered.json     [3] fitted α weights, τ, and CV diagnostics
-│
-├── benchmark/                         Section 4.1 of the paper
-│   └── query_register.csv             [4] 30-query benchmark with strata, scores, routing
-│
-└── experiments/
-    ├── prm_agreement/                 Section 4.2 of the paper
-    │   ├── prm_prompt.txt             [5] verbatim LLM-as-judge prompt
-    │   ├── runs/                      [6] per-query JSONL PRM decision traces
-    │   ├── experts/                   [7] anonymised expert ratings (E1, E2, E3)
-    │   ├── analyze.py                 [8] agreement analysis script
-    │   └── results.json               [9] analysis outputs (top-1 agreement, ρ, CIs)
-    │
-    └── tau_sensitivity/               Section 4.1 and Figure 3
-        ├── run.py                     [10] τ sweep script
-        └── results.csv                [11] sensitivity data for Figure 3
-```
+Current primary routing-label agreement is 25/30 (83.3%), including 5/10 (50%) borderline agreement. The historical 90% and 70% figures in older documentation describe superseded results and must not be cited as the current configuration. Calibration used one document, Contract Document.pdf, with 116 indexed chunks. Available files and indexed evidence are distinct: the serving folder held three PDFs while its saved index held two documents and 432 chunks.
 
-Numbered items map to the artifacts listed in Section 8 (Data Availability Statement).
+Original general-purpose GPT and Mistral conditions were ungrounded reference conditions. The new supplementary GPT_GROUNDED and MISTRAL_GROUNDED conditions use the same prompt and retrieved context as FLOW. All 200 matched comparisons had identical messages. ARA and GYM can retrieve further evidence from the same source-specific corpus; equal initial context does not imply equal retrieval effort.
 
-## Which paper number came from which file
+The supplementary rerun contains 540 completed trials: 20 questions, five methods and five repetitions (500 trials), plus eight OCR-correction questions with five repetitions (40 trials). One failed attempt was archived before a successful retry, giving 541 recorded formal attempts. Smoke checks are excluded. Both evaluators independently rated the 108 designated repetition-0 answers, producing 216 rating rows. The other 432 completed answers provide repeated timing observations, not additional human ratings.
 
-If you want to verify a specific claim in the paper, this table tells you where to look:
+ARA's mean correctness was 1.90/2, compared with 1.85 for GYM, 1.80 for FLOW and grounded GPT, and 1.75 for grounded Mistral. All paired correctness intervals include zero. Mean query median latency was 39.87 seconds for ARA and 43.13 seconds for GYM. C03 alone accounts for the 0.10-point lead over FLOW and grounded GPT. ARA selected GYM on C03, so the gap from standalone GYM reflects separate executions of the same retrieval and generation pipeline, not a routing benefit. Excluding C03, ARA scores below GYM. The supplementary results do not demonstrate a correctness improvement attributable to routing. Latency is computational response time, not practitioner time savings.
 
-| Claim in paper | Where to find it |
-|---|---|
-| Calibrated weights α = (1.00, 2.53, 6.99, 6.54, 0.94) — §3.2.6, Eq. 5 | `calibration/calibration_recovered.json` |
-| Calibrated threshold τ = 77.27 — §3.2.6, §4.1 | `calibration/calibration_recovered.json` |
-| Cross-validation AUC ≈ 0.94 — §3.2.6 | `calibration/calibration_recovered.json` |
-| 30-query benchmark composition — §4.1 | `benchmark/query_register.csv` |
-| Routing accuracy: 90 % overall, 70 % borderline — §4.1 | Run `experiments/tau_sensitivity/run.py` |
-| Figure 3 sensitivity curves — §4.1 | `experiments/tau_sensitivity/results.csv` |
-| PRM top-1 agreement 75.0 %, ρ = 0.38 — §4.2 | `experiments/prm_agreement/results.json` |
-| 21 ratable decisions, 0 % fallback — §4.2 | `experiments/prm_agreement/results.json` |
+## Files added by this release
 
-## Reproducing the paper's numbers in order
+- `experiments/r2_rerun/data/`: numeric trial records, two independent ratings, anonymous key, OCR edit counts, and hashed context comparisons.
+- `experiments/r2_rerun/analyze_public.py`: offline analysis used for this public release.
+- `experiments/r2_rerun/results/summary.json`: regenerated supplementary estimates.
+- `experiments/r2_rerun/execution_source/`: original rerun code and settings for inspection. Private inputs are intentionally absent.
+- `experiments/r2_rerun/provenance/`: original freeze hashes and release provenance.
+- `docs/ARA_R2_supplement.docx`: clean supplementary document, including both primary and supplementary results.
 
-**Calibration (§3.2.6).**
+## Access and reproducibility limits
 
-```
-cd calibration/
-python calibrate.py
-```
+We release numerical observations sufficient to recompute the supplementary score, agreement, timing and OCR-rate summaries. We withhold private PDFs, OCR and corrected text, questions derived from the private sources, generated answers, retrieval passages, vector databases, evaluator comments, and credentials. This prevents independent semantic re-rating and fresh answer generation from this public package alone. The OCR counts support pooled-rate calculation; validating those edit counts requires the withheld reference and OCR strings. Context hashes support comparison of the recorded hashes; independent examination of the messages requires authorized access to the original logs.
 
-This reads `calibration_set.csv`, fits the L2-regularised logistic regression, runs the Gaussian-mixture τ derivation, and prints the calibrated α and τ. The output should match `calibration_recovered.json` to at least three decimal places. If it doesn't, `numpy` or `scikit-learn` version drift is the likely cause; check `requirements.txt`.
+Execution code is preserved byte-for-byte from the completed archive. Its older comments and instructions are historical; use this README and the release documentation for the final results and public workflow. `execution_source/analyze.py` is the archived private-input analysis script, not the public entry point. This release does not claim that the full private execution environment is reproducible from public files alone.
 
-**Threshold sensitivity (§4.1, Figure 3).**
+## Licensing and citation
 
-```
-cd experiments/tau_sensitivity/
-python run.py
-```
+The preceding repository README declared MIT licensing for code and CC BY 4.0 for data and documentation. This update preserves those declarations and grants no rights to withheld corpus material. Cite the manuscript and the exact repository commit used. No DOI or publication details are invented here.
 
-This produces `results.csv` (thirteen rows across τ ∈ [0.7·τ, 1.3·τ]) and — if `matplotlib` is installed — a PDF version of Figure 3. Confirm overall accuracy = 0.90 and borderline accuracy = 0.70 at the calibrated τ = 77.27.
+## Document clarifications
 
-**PRM agreement study (§4.2).**
-
-```
-cd experiments/prm_agreement/
-python analyze.py
-```
-
-This reads the JSONL traces from `runs/` and the anonymised expert ratings from `experts/`, then computes top-1 PRM-vs-modal-expert agreement, Spearman ρ, and bootstrap 95 % CIs. Output should match `results.json`. The bootstrap uses seed = 42 for reproducibility.
-
-## What is deliberately not in this repository
-
-To be explicit about what has been withheld and why:
-
-- **Source contract PDFs.** The three contract sources (ADB consultancy, FIDIC MDB steel bridge, Link Engineering adjudication file) are third-party documents whose copyright is not held by the authors. The benchmark queries and computed complexity scores are released; the source PDFs are not. Interested readers can obtain equivalent standard-form contracts directly from FIDIC and ICTAD/CIDA.
-- **Full ARA production codebase.** The web-console, ingestion pipeline, and CLI orchestrator are not released. The paper's quantitative claims do not depend on these — they depend on the calibration procedure, the routing rule, and the evaluation traces, all of which are here. Interested collaborators can contact the corresponding author for the full codebase under a research collaboration agreement.
-- **LLM API keys and vendor-specific configuration.** No credentials are included. The PRM traces in `runs/` are pre-recorded outputs, so no live API access is needed to reproduce the analysis.
-- **Expert identities.** The five expert raters described in Table 3 and the three expert raters used in the PRM agreement study are identified by codes (E1–E5 for the main evaluation, separate E1–E3 for the agreement study). Real names, contact information, and per-rater metadata are not released. The panel composition and qualifications are described in the paper.
-
-## Data anonymisation policy
-
-Expert ratings in `experiments/prm_agreement/experts/` have been processed as follows before release:
-
-- Rater names replaced with codes (E1, E2, E3)
-- Email addresses, institutional affiliations, and free-text comments containing identifying information removed
-- Original file metadata (Excel Author field, timestamps) stripped
-- Raw ratings and scores are preserved verbatim; only identifying information has been altered
-
-## Verifying the artifacts
-
-Every CSV and JSON file in this repository has a corresponding SHA-256 hash listed in `manifest.sha256`. To verify:
-
-```
-sha256sum -c manifest.sha256
-```
-
-If any file has been tampered with or corrupted in transit, the check will flag it.
-
-## Citing this artifact
-
-If you use these artifacts, please cite both the paper and the Zenodo record:
-
-```bibtex
-@article{ara2026,
-  title   = {A Dual-Pipeline Retrieval-Augmented Generation Architecture for
-             Construction Contract Interpretation Using Query Complexity Assessment},
-  author  = {Uduwage-Don, N.L.S. and Sivanraj, S. and Maung, L.M. and
-             Boteju, L.S.W. and Kudabalage, A.E.},
-  journal = {Journal of Construction Engineering and Management},
-  year    = {2026},
-  publisher = {ASCE},
-  note    = {Manuscript COENG-19357: Under Review}
-}
-
-@dataset{ara2026_zenodo,
-  title     = {ARA: Reproducibility artifacts for JCEM COENG-19357},
-  author    = {Uduwage-Don, N.L.S. and Sivanraj, S. and Maung, L.M. and
-               Boteju, L.S.W. and Kudabalage, A.E.},
-  year      = {2026},
-  publisher = {Zenodo},
-  doi       = {10.5281/zenodo.21426461}
-}
-```
-
-## Contact
-
-Corresponding author: **Kudabalage Ashan Eranga**, Lecturer, School of Engineering, King Mongkut's Institute of Technology Ladkrabang, Bangkok, Thailand.
-Email: ashan.ku@kmitl.ac.th
-
-For issues with the artifacts, please open a GitHub issue rather than emailing directly — this creates a public record that helps other users.
-
-## License
-
-- Code (`*.py`) is released under the MIT License (see `LICENSE`).
-- Data (CSV, JSON, JSONL, prompt files) is released under CC BY 4.0.
-- Documentation (this README) is CC BY 4.0.
-
-Attribution: cite the paper and the Zenodo DOI.
-
-## Acknowledgements
-
-The authors thank the eight domain experts whose ratings and PRM validations underpin this evaluation. Their contributions are described in the paper (Table 3, §4.2) but they are not named here to preserve rater anonymity.
+See `docs/R2_METHOD_CLARIFICATIONS.md` for author-confirmed rubric and reporting clarifications made after the accompanying supplement was generated. Its numeric results are unchanged.

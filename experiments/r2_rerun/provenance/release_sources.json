@@ -1,0 +1,34 @@
+{
+  "archive_sha256": "e2e8de26c9ab8744dec6d2a64a78ee24e01dda603a17f53afa40a8fd77a89726",
+  "evaluator_2_amendment": "Final supplied B050/B054 numeric counts used. Correctness ratings remain independent. Evaluator 1 numeric counts unchanged. Free-text notes withheld.",
+  "copied_execution_source_sha256": {
+    "r2.py": "adbd06a57bdbf157219f7fe5a2c4f68e8763b2eabbec6ed4068c4d50f418dfa2",
+    "rerun_support.py": "40a8a7aa363c5ca640da1f742788cb4ed1019e12859bebafc0bc3dd4b78d35f6",
+    "config.py": "953b3bd4ddccb424606bc9fff9fbad2ca8fc35398934a08f370434529db4c01c",
+    "analyze.py": "65e7008cfaead1bef8ae0db9fa0a20f59d46e99e89257e68e6dfcd06d462dd43",
+    "study.json": "e3733c9c269503b70ef36147c9c9b10ba00b312f041f8380386d7cae02b5ff13",
+    "requirements.txt": "ca26e04b852bb9b43d5d34906f7b303d9038d1d04032c9dcaf3729ebe561a794",
+    "calibration/learned_weights.json": "9743b8deef21c25fe5b0a1bda1315c739b8fda335eddd0f31740ebd7e77d8aca",
+    "RATING_GUIDE.md": "de7a81f5e01d0bdfe63785d6e2d9c69e514314b4d622d5a3f27a63c5ec2f0e21",
+    "AMENDMENT.md": "c1ff08ed6264f4e31f3e1bb8e32de8620702a8989aab361d0243863b896b6819",
+    "ara/complexity.py": "3d57ac12905f9bb595f5874c8c9f8f052a617668694b901ee8806d786e945a62",
+    "ara/llm.py": "80f5eb2448b54ea9177d6fe38b07a1b304113799413e8b6e2209d6537c5df7b4",
+    "ara/preprocess.py": "2ba95a5b6760576d53e089c4512115766039abf083de4c035f1cbb2ccbf3abbe",
+    "ara/rag_flow.py": "c54d95e267a026cd95ad918d38fc8c35ab3fcc4ee2931069987fd5d95531cad5",
+    "ara/rag_gym.py": "d3689577f401400a91340c483a51e8a753448426085562f247faec4f99abea19",
+    "ara/retriever.py": "0d3bf26013533ca8dba422026536fe995827835331e6923874bb0e5e47957491",
+    "ara/router.py": "f4b6b66b13eeb39dfe49a58a0d4de604dc38f14b4e5cb96fc4b3f5c7ea4480da",
+    "ara/vectorstore.py": "6d637c0825c8c9b892e1e31b1e06c5750063dc1bd3af76d612ec1599f1b37258",
+    "ara/__init__.py": "78db9671ed67d4195e67837ac8c1977810a94f489fe7e558d63c98bc5421eaf3"
+  },
+  "models_requested": [
+    "gpt-5-mini",
+    "gpt-5.2",
+    "mistral-large-latest"
+  ],
+  "models_reported": [
+    "gpt-5-mini-2025-08-07",
+    "gpt-5.2-2025-12-11",
+    "mistral-large-latest"
+  ]
+}

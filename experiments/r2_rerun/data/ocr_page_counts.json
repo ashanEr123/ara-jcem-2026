@@ -1,0 +1,58 @@
+[
+  {
+    "page": 1,
+    "char_edits": 641,
+    "reference_chars": 2648,
+    "word_edits": 100,
+    "reference_words": 396
+  },
+  {
+    "page": 14,
+    "char_edits": 191,
+    "reference_chars": 2051,
+    "word_edits": 38,
+    "reference_words": 307
+  },
+  {
+    "page": 16,
+    "char_edits": 419,
+    "reference_chars": 1947,
+    "word_edits": 70,
+    "reference_words": 287
+  },
+  {
+    "page": 17,
+    "char_edits": 0,
+    "reference_chars": 535,
+    "word_edits": 0,
+    "reference_words": 80
+  },
+  {
+    "page": 34,
+    "char_edits": 14,
+    "reference_chars": 1785,
+    "word_edits": 3,
+    "reference_words": 275
+  },
+  {
+    "page": 35,
+    "char_edits": 196,
+    "reference_chars": 1833,
+    "word_edits": 41,
+    "reference_words": 279
+  },
+  {
+    "page": 36,
+    "char_edits": 11,
+    "reference_chars": 809,
+    "word_edits": 8,
+    "reference_words": 124
+  },
+  {
+    "page": 39,
+    "char_edits": 2,
+    "reference_chars": 817,
+    "word_edits": 2,
+    "reference_words": 131
+  }
+]

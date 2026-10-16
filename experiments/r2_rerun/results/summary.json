@@ -1,0 +1,719 @@
+{
+  "completed_trials": 540,
+  "archived_failed_attempts": 1,
+  "recorded_formal_attempts": 541,
+  "statuses": {
+    "ok": 540
+  },
+  "human_rated_answers": 108,
+  "human_rating_rows": 216,
+  "completed_by_system": {
+    "ARA": 100,
+    "FLOW": 100,
+    "FLOW_CORRECTED": 40,
+    "GPT_GROUNDED": 100,
+    "GYM": 100,
+    "MISTRAL_GROUNDED": 100
+  },
+  "context_pairs": 200,
+  "context_mismatches": 0,
+  "ocr": {
+    "char_edits": 1474,
+    "reference_chars": 12425,
+    "word_edits": 262,
+    "reference_words": 1879,
+    "CER": 0.1186317907444668,
+    "WER": 0.13943587014369346
+  },
+  "rater_system_summaries": {
+    "E1 ARA": {
+      "n_answers": 20,
+      "correctness_mean": 1.85,
+      "citation_total": 242,
+      "citation_supported": 221,
+      "factual_claims": 164,
+      "unsupported_claims": 9
+    },
+    "E1 FLOW": {
+      "n_answers": 20,
+      "correctness_mean": 1.8,
+      "citation_total": 102,
+      "citation_supported": 96,
+      "factual_claims": 83,
+      "unsupported_claims": 3
+    },
+    "E1 GYM": {
+      "n_answers": 20,
+      "correctness_mean": 1.85,
+      "citation_total": 204,
+      "citation_supported": 191,
+      "factual_claims": 144,
+      "unsupported_claims": 6
+    },
+    "E1 GPT_GROUNDED": {
+      "n_answers": 20,
+      "correctness_mean": 1.8,
+      "citation_total": 107,
+      "citation_supported": 102,
+      "factual_claims": 78,
+      "unsupported_claims": 3
+    },
+    "E1 MISTRAL_GROUNDED": {
+      "n_answers": 20,
+      "correctness_mean": 1.75,
+      "citation_total": 97,
+      "citation_supported": 88,
+      "factual_claims": 81,
+      "unsupported_claims": 4
+    },
+    "E1 FLOW_CORRECTED": {
+      "n_answers": 8,
+      "correctness_mean": 1.875,
+      "citation_total": 40,
+      "citation_supported": 34,
+      "factual_claims": 30,
+      "unsupported_claims": 1
+    },
+    "E2 ARA": {
+      "n_answers": 20,
+      "correctness_mean": 1.95,
+      "citation_total": 293,
+      "citation_supported": 258,
+      "factual_claims": 153,
+      "unsupported_claims": 7
+    },
+    "E2 FLOW": {
+      "n_answers": 20,
+      "correctness_mean": 1.8,
+      "citation_total": 135,
+      "citation_supported": 105,
+      "factual_claims": 78,
+      "unsupported_claims": 3
+    },
+    "E2 GYM": {
+      "n_answers": 20,
+      "correctness_mean": 1.85,
+      "citation_total": 265,
+      "citation_supported": 240,
+      "factual_claims": 142,
+      "unsupported_claims": 6
+    },
+    "E2 GPT_GROUNDED": {
+      "n_answers": 20,
+      "correctness_mean": 1.8,
+      "citation_total": 129,
+      "citation_supported": 109,
+      "factual_claims": 73,
+      "unsupported_claims": 4
+    },
+    "E2 MISTRAL_GROUNDED": {
+      "n_answers": 20,
+      "correctness_mean": 1.75,
+      "citation_total": 107,
+      "citation_supported": 92,
+      "factual_claims": 73,
+      "unsupported_claims": 5
+    },
+    "E2 FLOW_CORRECTED": {
+      "n_answers": 8,
+      "correctness_mean": 1.875,
+      "citation_total": 43,
+      "citation_supported": 38,
+      "factual_claims": 32,
+      "unsupported_claims": 1
+    }
+  },
+  "quality_ARA_minus": {
+    "FLOW": {
+      "n_questions": 20,
+      "mean_difference": 0.1,
+      "ci95": [
+        -0.1,
+        0.35
+      ]
+    },
+    "GYM": {
+      "n_questions": 20,
+      "mean_difference": 0.05,
+      "ci95": [
+        -0.1,
+        0.275
+      ]
+    },
+    "GPT_GROUNDED": {
+      "n_questions": 20,
+      "mean_difference": 0.1,
+      "ci95": [
+        -0.1,
+        0.35
+      ]
+    },
+    "MISTRAL_GROUNDED": {
+      "n_questions": 20,
+      "mean_difference": 0.15,
+      "ci95": [
+        -0.075,
+        0.4
+      ]
+    }
+  },
+  "mean_query_median_latency_s": {
+    "ARA": 39.86898264501942,
+    "FLOW": 7.906993484991835,
+    "GYM": 43.12631943997694,
+    "GPT_GROUNDED": 4.615270010003587,
+    "MISTRAL_GROUNDED": 4.552246169996215
+  },
+  "timing_ARA_minus": {
+    "FLOW": {
+      "n_questions": 20,
+      "mean_difference": 31.96198916002759,
+      "ci95": [
+        23.99544846077173,
+        41.138578564396155
+      ]
+    },
+    "GYM": {
+      "n_questions": 20,
+      "mean_difference": -3.2573367949575185,
+      "ci95": [
+        -6.783215332323889,
+        -0.15516645645402677
+      ]
+    },
+    "GPT_GROUNDED": {
+      "n_questions": 20,
+      "mean_difference": 35.25371263501584,
+      "ci95": [
+        27.170988246509662,
+        44.58891573586894
+      ]
+    },
+    "MISTRAL_GROUNDED": {
+      "n_questions": 20,
+      "mean_difference": 35.316736475023205,
+      "ci95": [
+        27.271193037153715,
+        44.53977190750025
+      ]
+    }
+  },
+  "timing_by_source": {
+    "CIRCULARS FLOW": {
+      "n_questions": 8,
+      "mean_difference": 32.43412787503621,
+      "ci95": [
+        20.523220381876673,
+        44.75576477159483
+      ]
+    },
+    "DEFENCE FLOW": {
+      "n_questions": 12,
+      "mean_difference": 31.647230016688507,
+      "ci95": [
+        21.192675868977677,
+        44.872569155253586
+      ]
+    },
+    "CIRCULARS GYM": {
+      "n_questions": 8,
+      "mean_difference": -4.669143212449853,
+      "ci95": [
+        -11.531074949918548,
+        1.4126977078878538
+      ]
+    },
+    "DEFENCE GYM": {
+      "n_questions": 12,
+      "mean_difference": -2.3161325166292954,
+      "ci95": [
+        -6.293309423097768,
+        0.613644721522723
+      ]
+    },
+    "CIRCULARS GPT_GROUNDED": {
+      "n_questions": 8,
+      "mean_difference": 35.54287366250355,
+      "ci95": [
+        22.922060049997526,
+        48.298778172491055
+      ]
+    },
+    "DEFENCE GPT_GROUNDED": {
+      "n_questions": 12,
+      "mean_difference": 35.06093861669069,
+      "ci95": [
+        24.6131890164744,
+        48.10290305439508
+      ]
+    },
+    "CIRCULARS MISTRAL_GROUNDED": {
+      "n_questions": 8,
+      "mean_difference": 35.7299911500304,
+      "ci95": [
+        23.002396900046733,
+        48.57023753937719
+      ]
+    },
+    "DEFENCE MISTRAL_GROUNDED": {
+      "n_questions": 12,
+      "mean_difference": 35.04123335835175,
+      "ci95": [
+        24.786144298986862,
+        48.02665097960344
+      ]
+    }
+  },
+  "rater_paired_comparisons": {
+    "E1 CIRCULARS ARA minus FLOW correctness": {
+      "n_questions": 8,
+      "mean_difference": 0.125,
+      "ci95": [
+        -0.375,
+        0.75
+      ]
+    },
+    "E1 CIRCULARS ARA minus FLOW citation_support": {
+      "n_questions": 8,
+      "mean_difference": 0.034283832109919074,
+      "ci95": [
+        -0.15270562770562768,
+        0.32841614906832295
+      ]
+    },
+    "E1 CIRCULARS ARA minus FLOW unsupported_rate": {
+      "n_questions": 8,
+      "mean_difference": -0.03888888888888888,
+      "ci95": [
+        -0.33333333333333337,
+        0.175
+      ]
+    },
+    "E1 CIRCULARS ARA minus GYM correctness": {
+      "n_questions": 8,
+      "mean_difference": 0.125,
+      "ci95": [
+        -0.375,
+        0.75
+      ]
+    },
+    "E1 CIRCULARS ARA minus GYM citation_support": {
+      "n_questions": 8,
+      "mean_difference": -0.08759116789008094,
+      "ci95": [
+        -0.20910443722943722,
+        0.026934523809523797
+      ]
+    },
+    "E1 CIRCULARS ARA minus GYM unsupported_rate": {
+      "n_questions": 8,
+      "mean_difference": 0.0069444444444444475,
+      "ci95": [
+        -0.14583333333333331,
+        0.1875
+      ]
+    },
+    "E1 CIRCULARS ARA minus GPT_GROUNDED correctness": {
+      "n_questions": 8,
+      "mean_difference": 0.125,
+      "ci95": [
+        -0.375,
+        0.75
+      ]
+    },
+    "E1 CIRCULARS ARA minus GPT_GROUNDED citation_support": {
+      "n_questions": 8,
+      "mean_difference": 0.025950498776585743,
+      "ci95": [
+        -0.16263175230566534,
+        0.322463768115942
+      ]
+    },
+    "E1 CIRCULARS ARA minus GPT_GROUNDED unsupported_rate": {
+      "n_questions": 8,
+      "mean_difference": -0.055555555555555546,
+      "ci95": [
+        -0.3472222222222222,
+        0.15277777777777776
+      ]
+    },
+    "E1 CIRCULARS ARA minus MISTRAL_GROUNDED correctness": {
+      "n_questions": 8,
+      "mean_difference": 0.125,
+      "ci95": [
+        -0.375,
+        0.75
+      ]
+    },
+    "E1 CIRCULARS ARA minus MISTRAL_GROUNDED citation_support": {
+      "n_questions": 8,
+      "mean_difference": 0.0021409749670619344,
+      "ci95": [
+        -0.2327075098814229,
+        0.3270633352155091
+      ]
+    },
+    "E1 CIRCULARS ARA minus MISTRAL_GROUNDED unsupported_rate": {
+      "n_questions": 8,
+      "mean_difference": -0.04513888888888889,
+      "ci95": [
+        -0.3368055555555556,
+        0.16319444444444442
+      ]
+    },
+    "E1 CIRCULARS FLOW_CORRECTED minus FLOW correctness": {
+      "n_questions": 8,
+      "mean_difference": 0.25,
+      "ci95": [
+        -0.25,
+        0.875
+      ]
+    },
+    "E1 CIRCULARS FLOW_CORRECTED minus FLOW citation_support": {
+      "n_questions": 8,
+      "mean_difference": 0.08750000000000001,
+      "ci95": [
+        -0.04999999999999999,
+        0.25
+      ]
+    },
+    "E1 CIRCULARS FLOW_CORRECTED minus FLOW unsupported_rate": {
+      "n_questions": 8,
+      "mean_difference": -0.10833333333333334,
+      "ci95": [
+        -0.4,
+        0.09999999999999999
+      ]
+    },
+    "E1 DEFENCE ARA minus FLOW correctness": {
+      "n_questions": 12,
+      "mean_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "E1 DEFENCE ARA minus FLOW citation_support": {
+      "n_questions": 12,
+      "mean_difference": -0.03794642857142857,
+      "ci95": [
+        -0.059625496031746016,
+        -0.016716269841269837
+      ]
+    },
+    "E1 DEFENCE ARA minus FLOW unsupported_rate": {
+      "n_questions": 12,
+      "mean_difference": 0.01875,
+      "ci95": [
+        0.0,
+        0.04583333333333334
+      ]
+    },
+    "E1 DEFENCE ARA minus GYM correctness": {
+      "n_questions": 12,
+      "mean_difference": -0.08333333333333333,
+      "ci95": [
+        -0.25,
+        0.0
+      ]
+    },
+    "E1 DEFENCE ARA minus GYM citation_support": {
+      "n_questions": 12,
+      "mean_difference": 0.021284201479634928,
+      "ci95": [
+        -0.03144033734905445,
+        0.08708877251059913
+      ]
+    },
+    "E1 DEFENCE ARA minus GYM unsupported_rate": {
+      "n_questions": 12,
+      "mean_difference": 0.002083333333333333,
+      "ci95": [
+        -0.018750000000000003,
+        0.025000000000000005
+      ]
+    },
+    "E1 DEFENCE ARA minus GPT_GROUNDED correctness": {
+      "n_questions": 12,
+      "mean_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "E1 DEFENCE ARA minus GPT_GROUNDED citation_support": {
+      "n_questions": 12,
+      "mean_difference": -0.004613095238095231,
+      "ci95": [
+        -0.05183531746031745,
+        0.06587301587301589
+      ]
+    },
+    "E1 DEFENCE ARA minus GPT_GROUNDED unsupported_rate": {
+      "n_questions": 12,
+      "mean_difference": 0.01875,
+      "ci95": [
+        0.0,
+        0.04583333333333334
+      ]
+    },
+    "E1 DEFENCE ARA minus MISTRAL_GROUNDED correctness": {
+      "n_questions": 12,
+      "mean_difference": 0.08333333333333333,
+      "ci95": [
+        0.0,
+        0.25
+      ]
+    },
+    "E1 DEFENCE ARA minus MISTRAL_GROUNDED citation_support": {
+      "n_questions": 12,
+      "mean_difference": 0.052331349206349215,
+      "ci95": [
+        -0.03596230158730158,
+        0.1644940476190475
+      ]
+    },
+    "E1 DEFENCE ARA minus MISTRAL_GROUNDED unsupported_rate": {
+      "n_questions": 12,
+      "mean_difference": 0.01875,
+      "ci95": [
+        0.0,
+        0.04583333333333334
+      ]
+    },
+    "E2 CIRCULARS ARA minus FLOW correctness": {
+      "n_questions": 8,
+      "mean_difference": 0.25,
+      "ci95": [
+        -0.25,
+        0.875
+      ]
+    },
+    "E2 CIRCULARS ARA minus FLOW citation_support": {
+      "n_questions": 8,
+      "mean_difference": 0.035460372960372966,
+      "ci95": [
+        -0.20064102564102565,
+        0.3466914335664334
+      ]
+    },
+    "E2 CIRCULARS ARA minus FLOW unsupported_rate": {
+      "n_questions": 8,
+      "mean_difference": -0.04642857142857143,
+      "ci95": [
+        -0.3464285714285714,
+        0.16428571428571426
+      ]
+    },
+    "E2 CIRCULARS ARA minus GYM correctness": {
+      "n_questions": 8,
+      "mean_difference": 0.25,
+      "ci95": [
+        0.0,
+        0.75
+      ]
+    },
+    "E2 CIRCULARS ARA minus GYM citation_support": {
+      "n_questions": 8,
+      "mean_difference": -0.0917832167832168,
+      "ci95": [
+        -0.21401515151515155,
+        0.021487470862470638
+      ]
+    },
+    "E2 CIRCULARS ARA minus GYM unsupported_rate": {
+      "n_questions": 8,
+      "mean_difference": 0.018750000000000003,
+      "ci95": [
+        -0.1419642857142857,
+        0.16339285714285715
+      ]
+    },
+    "E2 CIRCULARS ARA minus GPT_GROUNDED correctness": {
+      "n_questions": 8,
+      "mean_difference": 0.25,
+      "ci95": [
+        -0.25,
+        0.875
+      ]
+    },
+    "E2 CIRCULARS ARA minus GPT_GROUNDED citation_support": {
+      "n_questions": 8,
+      "mean_difference": 0.00901806526806527,
+      "ci95": [
+        -0.21401515151515152,
+        0.3221590909090909
+      ]
+    },
+    "E2 CIRCULARS ARA minus GPT_GROUNDED unsupported_rate": {
+      "n_questions": 8,
+      "mean_difference": -0.05267857142857142,
+      "ci95": [
+        -0.3526785714285714,
+        0.15000000000000002
+      ]
+    },
+    "E2 CIRCULARS ARA minus MISTRAL_GROUNDED correctness": {
+      "n_questions": 8,
+      "mean_difference": 0.25,
+      "ci95": [
+        -0.25,
+        0.875
+      ]
+    },
+    "E2 CIRCULARS ARA minus MISTRAL_GROUNDED citation_support": {
+      "n_questions": 8,
+      "mean_difference": 0.00901806526806527,
+      "ci95": [
+        -0.20984848484848484,
+        0.3202840909090902
+      ]
+    },
+    "E2 CIRCULARS ARA minus MISTRAL_GROUNDED unsupported_rate": {
+      "n_questions": 8,
+      "mean_difference": -0.05267857142857142,
+      "ci95": [
+        -0.3526785714285714,
+        0.15000000000000002
+      ]
+    },
+    "E2 CIRCULARS FLOW_CORRECTED minus FLOW correctness": {
+      "n_questions": 8,
+      "mean_difference": 0.25,
+      "ci95": [
+        -0.25,
+        0.875
+      ]
+    },
+    "E2 CIRCULARS FLOW_CORRECTED minus FLOW citation_support": {
+      "n_questions": 8,
+      "mean_difference": 0.09102564102564102,
+      "ci95": [
+        -0.08333333333333334,
+        0.2826923076923077
+      ]
+    },
+    "E2 CIRCULARS FLOW_CORRECTED minus FLOW unsupported_rate": {
+      "n_questions": 8,
+      "mean_difference": -0.10833333333333334,
+      "ci95": [
+        -0.4,
+        0.09999999999999999
+      ]
+    },
+    "E2 DEFENCE ARA minus FLOW correctness": {
+      "n_questions": 12,
+      "mean_difference": 0.08333333333333333,
+      "ci95": [
+        0.0,
+        0.25
+      ]
+    },
+    "E2 DEFENCE ARA minus FLOW citation_support": {
+      "n_questions": 12,
+      "mean_difference": 0.02150566340923817,
+      "ci95": [
+        -0.07117281584474598,
+        0.12487474279751212
+      ]
+    },
+    "E2 DEFENCE ARA minus FLOW unsupported_rate": {
+      "n_questions": 12,
+      "mean_difference": 0.013888888888888888,
+      "ci95": [
+        0.0,
+        0.041666666666666664
+      ]
+    },
+    "E2 DEFENCE ARA minus GYM correctness": {
+      "n_questions": 12,
+      "mean_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "E2 DEFENCE ARA minus GYM citation_support": {
+      "n_questions": 12,
+      "mean_difference": -0.018642344447103026,
+      "ci95": [
+        -0.08484928403401058,
+        0.04218616234150929
+      ]
+    },
+    "E2 DEFENCE ARA minus GYM unsupported_rate": {
+      "n_questions": 12,
+      "mean_difference": -0.006944444444444445,
+      "ci95": [
+        -0.0625,
+        0.041666666666666664
+      ]
+    },
+    "E2 DEFENCE ARA minus GPT_GROUNDED correctness": {
+      "n_questions": 12,
+      "mean_difference": 0.08333333333333333,
+      "ci95": [
+        0.0,
+        0.25
+      ]
+    },
+    "E2 DEFENCE ARA minus GPT_GROUNDED citation_support": {
+      "n_questions": 12,
+      "mean_difference": -0.03836536833679358,
+      "ci95": [
+        -0.08386043343471436,
+        0.01538719431153638
+      ]
+    },
+    "E2 DEFENCE ARA minus GPT_GROUNDED unsupported_rate": {
+      "n_questions": 12,
+      "mean_difference": -0.0027777777777777796,
+      "ci95": [
+        -0.05000000000000001,
+        0.041666666666666664
+      ]
+    },
+    "E2 DEFENCE ARA minus MISTRAL_GROUNDED correctness": {
+      "n_questions": 12,
+      "mean_difference": 0.16666666666666666,
+      "ci95": [
+        0.0,
+        0.4166666666666667
+      ]
+    },
+    "E2 DEFENCE ARA minus MISTRAL_GROUNDED citation_support": {
+      "n_questions": 12,
+      "mean_difference": -0.0007165588129840564,
+      "ci95": [
+        -0.11670281819563627,
+        0.13012078982913589
+      ]
+    },
+    "E2 DEFENCE ARA minus MISTRAL_GROUNDED unsupported_rate": {
+      "n_questions": 12,
+      "mean_difference": -0.006944444444444445,
+      "ci95": [
+        -0.0625,
+        0.041666666666666664
+      ]
+    }
+  },
+  "correctness_agreement": {
+    "agreement_count": 106,
+    "n": 108,
+    "proportion": 0.9814814814814815,
+    "unweighted_kappa": 0.9250000000000002,
+    "quadratic_weighted_kappa": 0.9577464788732395
+  },
+  "routing_rep0": {
+    "multi_step_raggym": 18,
+    "simple_ragflow": 2
+  },
+  "bootstrap": {
+    "seed": 19357,
+    "draws": 10000,
+    "overall": "Question resampling within source, source order CIRCULARS then DEFENCE",
+    "source_specific": "Question resampling within source",
+    "confidence": "Exploratory percentile intervals, unadjusted; conditional on selected documents"
+  }
+}

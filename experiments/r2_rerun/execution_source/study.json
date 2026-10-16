@@ -1,0 +1,35 @@
+{
+  "seed": 19357,
+  "repetitions": 5,
+  "ocr_pages": [
+    1,
+    14,
+    16,
+    17,
+    34,
+    35,
+    36,
+    39
+  ],
+  "models": {
+    "generator": "gpt-5-mini",
+    "embedding": "text-embedding-3-small",
+    "ocr": "mistral-ocr-latest",
+    "gpt_baseline": "gpt-5.2",
+    "mistral_baseline": "mistral-large-latest"
+  },
+  "top_k": 5,
+  "chunk_size": 900,
+  "chunk_overlap": 150,
+  "primary_quality_rep": 0,
+  "rerun": {
+    "structured_completion_tokens": 8192,
+    "final_completion_tokens": 8192,
+    "min_request_interval_s": 2.0,
+    "request_timeout_s": 120,
+    "max_transport_attempts": 2,
+    "retry_wait_s": 5,
+    "stop_after_non_ok": true,
+    "version": "2026-10-15-r1"
+  }
+}

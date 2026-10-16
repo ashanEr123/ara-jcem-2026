@@ -1,0 +1,24 @@
+{
+  "alpha": {
+    "T": 1.0,
+    "Ops": 2.5287,
+    "Depth": 6.9883,
+    "Amb": 6.5402,
+    "Dom": 0.9382
+  },
+  "tau": 77.27,
+  "fit": "non-negative (monotonic)",
+  "priors": "balanced",
+  "n_simple": 75,
+  "n_complex": 75,
+  "score_dist": {
+    "simple": [
+      67.27,
+      7.0
+    ],
+    "complex": [
+      87.27,
+      12.97
+    ]
+  }
+}
